@@ -1,0 +1,116 @@
+<div class="card card-body">
+  <h5><a href="#" data-toggle="collapse" data-target="#movieSearchCollapse">Like Movies? Search the New York Times capsule movie reviews by movie title to help you refresh your memory when creating or taking a quiz!</a></h5>
+  <div class="collapse" id="movieSearchCollapse">
+    <form class="form-inline">
+      <div class="form-group mb-2">
+        <label for="movieSearchTerms" class="sr-only">Enter movie title</label>
+        <input type="text" class="form-control" id="movieSearchTerms" placeholder="Enter movie title">
+      </div>
+      <button type="submit" class="btn btn-primary mb-2" id="jqueryMovieSearchSubmit">Search</button>
+    </form>
+    <h5>Search result:</h5>
+    <div id="movieSearchResults"></div>
+  </div>
+</div>
+<p></p>
+
+<div class="card card-body">
+<p>
+  <button #addPost class="btn btn-primary" type="button" data-toggle="collapse" data-target="#showNewQuizForm" aria-expanded="false" aria-controls="showNewQuizFormBtn" id="#showNewQuizForm">
+    Create a quiz!
+  </button>
+</p>
+<div class="collapse" id="showNewQuizForm">
+
+    <form id="newQuizForm">
+        <div class="form-group">
+            <label for="newQuizTitle">Quiz Title</label>
+            <input name="newQuizTitle" type="text" [(ngModel)]="post.title" class="form-control" id="newQuizTitle" placeholder="Enter title">
+
+        </div>
+        <div class="form-group">
+            <label for="newQuizDescription">Quiz Description</label>
+            <textarea name="newQuizDescription" [(ngModel)]="post.description" class="form-control" id="newQuizDescription" placeholder="Description">
+            </textarea>
+        </div>
+
+        <div class="form-group container">
+          <div class="row">
+            <div class="col-sm">
+              <label for="question_one">Question One</label>
+              <textarea name="question_one" [(ngModel)]="post.question_one" class="form-control" id="question_one" placeholder="Question goes here">
+              </textarea>
+            </div>
+            <div class="col-sm">
+              <label for="answer_one">Answer One</label>
+              <textarea name="answer_one" [(ngModel)]="post.answer_one" class="form-control" id="answer_one" placeholder="Answer goes here">
+              </textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group container">
+          <div class="row">
+            <div class="col-sm">
+              <label for="question_two">Question Two (optional)</label>
+              <textarea name="question_two" [(ngModel)]="post.question_two" class="form-control" id="question_two" placeholder="Question goes here">
+              </textarea>
+            </div>
+            <div class="col-sm">
+              <label for="answer_two">Answer Two</label>
+              <textarea name="answer_two" [(ngModel)]="post.answer_two" class="form-control" id="answer_two" placeholder="Answer goes here">
+              </textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group container">
+          <div class="row">
+            <div class="col-sm">
+              <label for="question_three">Question Three (optional)</label>
+              <textarea name="question_three" [(ngModel)]="post.question_three" class="form-control" id="question_three" placeholder="Question goes here">
+              </textarea>
+            </div>
+            <div class="col-sm">
+              <label for="answer_three">Answer Three (optional)</label>
+              <textarea name="answer_three" [(ngModel)]="post.answer_three" class="form-control" id="answer_three" placeholder="Answer goes here">
+              </textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group container">
+          <div class="row">
+            <div class="col-sm">
+              <label for="question_four">Question Four (optional)</label>
+              <textarea name="question_four" [(ngModel)]="post.question_four" class="form-control" id="question_four" placeholder="Question goes here">
+              </textarea>
+            </div>
+            <div class="col-sm">
+              <label for="answer_four">Answer Four (optional)</label>
+              <textarea name="answer_four" [(ngModel)]="post.answer_four" class="form-control" id="answer_four" placeholder="Answer goes here">
+              </textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group container">
+          <div class="row">
+            <div class="col-sm">
+              <label for="question_five">Question Five (optional)</label>
+              <textarea name="question_five" [(ngModel)]="post.question_five" class="form-control" id="question_five" placeholder="Question goes here">
+              </textarea>
+            </div>
+            <div class="col-sm">
+              <label for="answer_five">Answer Five (optional)</label>
+              <textarea name="answer_five" [(ngModel)]="post.answer_five" class="form-control" id="answer_five" placeholder="Answer goes here">
+              </textarea>
+            </div>
+          </div>
+        </div>
+
+        <button (click)="addPostBtnClick()" type="button" class="btn btn-primary">Add this quiz</button>
+      </form>
+
+    </div>
+</div>

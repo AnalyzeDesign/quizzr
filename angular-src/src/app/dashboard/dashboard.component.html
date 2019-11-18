@@ -1,0 +1,16 @@
+<div *ngIf="user">
+  <h1 class="page-header">{{user.name}} | Quiz Dashboard</h1>
+
+
+  <app-add-post></app-add-post>
+  <p></p>
+  <h3>Quizzr Users' Quizzes</h3>
+  <app-show-post></app-show-post>
+
+
+</div>
+<div *ngIf="!user">
+  You must be a registered and logged in user to view this page.
+  <a class="btn btn-outline-primary btn-sm" [routerLink]="['/register']">Register</a>
+  <a class="btn btn-outline-primary btn-sm" [routerLink]="['/login']">Login</a>
+</div>
