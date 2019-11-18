@@ -43,7 +43,8 @@ In its current iteration, users can register, login, create quizzes, edit quizze
 ## Background
 
 Wireframes used in the development of the project.
+![Wireframe](capstone_images/wireframes1.png?raw=true "Wireframe")
 
 A Trello Board used to align the project with the agile methodology.
-
+![Trello Board](capstone_images/trello_board.png?raw=true "Trello Board")
 
